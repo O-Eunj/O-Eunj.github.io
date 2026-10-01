@@ -2,6 +2,8 @@
 
 GitHub Pages용 정적 웹사이트입니다. 빌드나 npm 설치 없이 동작합니다.
 
+포트폴리오 웹사이트: [https://o-eunj.github.io/](https://o-eunj.github.io/)
+
 ## 구성
 
 | 순서 | 프로젝트 | 분량 |
