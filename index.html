@@ -5,7 +5,7 @@
   <meta name="description" content="오은지의 임베디드·로봇 펌웨어 포트폴리오. STM32, FreeRTOS, micro-ROS, 모터 제어와 하드웨어 통합 프로젝트.">
   <meta name="theme-color" content="#111c2d">
   <title>오은지 · Robotics Firmware Portfolio</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="config.js" defer></script><script src="app.js" defer></script>
 </head>
@@ -48,10 +48,10 @@
     <div class="hardware-layout">
       <figure class="hardware-figure">
         <div class="panel-heading"><span>HARDWARE CONFIGURATION</span><span>02 / 03</span></div>
-        <a class="hardware-image-link" href="assets/robot-hardware.png" target="_blank" rel="noopener noreferrer" aria-label="주행로봇 하드웨어 구성도 원본 확대 보기 (새 탭)">
-          <img src="assets/robot-hardware.png" alt="직접 구성한 주행로봇 하드웨어 연결도. 배터리와 전원부, XL430 모터 두 대, Raspberry Pi, NUCLEO-F411RE 보드 및 MPU9250 IMU의 배선 구성." width="830" height="638">
+        <a class="hardware-image-link" href="robot-hardware.png" target="_blank" rel="noopener noreferrer" aria-label="주행로봇 하드웨어 구성도 원본 확대 보기 (새 탭)">
+          <img src="robot-hardware.png" alt="직접 구성한 주행로봇 하드웨어 연결도. 배터리와 전원부, XL430 모터 두 대, Raspberry Pi, NUCLEO-F411RE 보드 및 MPU9250 IMU의 배선 구성." width="830" height="638">
         </a>
-        <figcaption><div><strong>직접 구성한 주행로봇 하드웨어</strong><p>전원부 · STM32F411 · XL430 · Raspberry Pi · IMU</p></div><a href="assets/robot-hardware.png" target="_blank" rel="noopener noreferrer">원본 확대 보기 ↗</a></figcaption>
+        <figcaption><div><strong>직접 구성한 주행로봇 하드웨어</strong><p>전원부 · STM32F411 · XL430 · Raspberry Pi · IMU</p></div><a href="robot-hardware.png" target="_blank" rel="noopener noreferrer">원본 확대 보기 ↗</a></figcaption>
       </figure>
       <div class="hardware-notes"><h3 class="label">하드웨어 구성</h3><div class="work-list">
         <article><span>01</span><div><h3>전원부</h3><p>배터리와 전원 분배부, DC-DC 변환기를 연결해 각 장치의 전원을 구성했습니다.</p></div></article>
@@ -84,7 +84,7 @@
   <section class="sheet light" id="guide" data-project="guide" aria-labelledby="guide-title">
     <div class="section-top"><span class="eyebrow">01 / GUIDE DOG ROBOT</span><span>01 / 02</span></div>
     <div class="section-heading"><div><p class="kicker">PWM · PID · UART · 코드 통합</p><h2 id="guide-title">안내견 로봇</h2><p class="subtitle">사용자의 의도와 장애물 회피 명령을 하나의 주행 로직으로.</p></div><span class="project-number" aria-hidden="true">01</span></div>
-    <div class="two-col guide-layout"><figure class="project-photo"><img src="assets/guide-photo.jpg" alt="손잡이가 달린 안내견 로봇의 실내 주행 시연 장면" loading="lazy" width="1280" height="720"><figcaption>팀 결과보고서의 시연 장면</figcaption></figure><div><h3 class="label">프로젝트와 나의 역할</h3><p class="body-large">손잡이의 기울기를 따라 움직이고, 상위 시스템의 장애물 회피 명령에 반응하는 주행 보조 로봇입니다.</p><div class="role-callout"><span>MY ROLE</span><h3>모터 제어 · 전체 코드 통합</h3><p>PWM 출력, PID 제어, UART 통신을 구현하고 개별 기능을 연결하는 전체 제어 로직을 구성했습니다.</p></div><div class="chips on-light"><span>STM32</span><span>L298N</span><span>PID</span><span>UART</span></div></div></div>
+    <div class="two-col guide-layout"><figure class="project-photo"><img src="guide-photo.jpg" alt="손잡이가 달린 안내견 로봇의 실내 주행 시연 장면" loading="lazy" width="1280" height="720"><figcaption>팀 결과보고서의 시연 장면</figcaption></figure><div><h3 class="label">프로젝트와 나의 역할</h3><p class="body-large">손잡이의 기울기를 따라 움직이고, 상위 시스템의 장애물 회피 명령에 반응하는 주행 보조 로봇입니다.</p><div class="role-callout"><span>MY ROLE</span><h3>모터 제어 · 전체 코드 통합</h3><p>PWM 출력, PID 제어, UART 통신을 구현하고 개별 기능을 연결하는 전체 제어 로직을 구성했습니다.</p></div><div class="chips on-light"><span>STM32</span><span>L298N</span><span>PID</span><span>UART</span></div></div></div>
     <div class="contribution-strip"><div><small>INPUT</small><strong>손잡이 기울기 · UART 명령</strong></div><div><small>CONTROL</small><strong>모드 전환 · PID · 차동 믹싱</strong></div><div><small>OUTPUT</small><strong>좌우 DC 모터 PWM</strong></div></div>
     <footer class="sheet-footer"><span>팀 전체의 영상 인식·센서 기능과 나의 모터 제어 업무를 연결</span><span>오은지 / FIRMWARE PORTFOLIO <b>04</b></span></footer>
   </section>
