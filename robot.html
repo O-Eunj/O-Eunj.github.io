@@ -1,0 +1,59 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>스마트플랜트 · 오은지</title><meta name="description" content="오은지의 로봇·임베디드 펌웨어 포트폴리오. 모터 제어, PID, STM32와 ROS 2 연동 프로젝트."><meta name="theme-color" content="#111c2d"><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><script src="config.js" defer></script><script src="app.js" defer></script></head><body class="detail"><a class="skip" href="#main">본문으로 이동</a><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">EJ<span>_</span></span><span>오은지<small>FIRMWARE ENGINEER</small></span></a><nav aria-label="주 메뉴"><a href="index.html#about">소개</a><a href="index.html#projects">프로젝트</a><a href="index.html#skills">기술 스택</a></nav><a class="github" href="https://github.com/O-Eunj" target="_blank" rel="noopener noreferrer">GitHub ↗</a></header><main id="main"><div class="detail-bar"><a href="index.html#projects">← 전체 프로젝트</a><nav aria-label="프로젝트 목차"><a href="#robot">01 개요</a><a href="#robot-hardware">02 하드웨어</a><a href="#robot-detail">03 담당 업무</a></nav></div><section class="sheet hero" id="robot" data-project="robot" aria-labelledby="robot-title">
+    <div class="eyebrow"><span>ROBOTICS / EMBEDDED SYSTEMS</span><span>FIRMWARE PORTFOLIO</span></div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="intro-name">01 / MOBILE ROBOT FIRMWARE</p>
+        <h1 id="robot-title">스마트플랜트<span>.</span></h1>
+        <p class="lead">자동화 공정 속 운반·적재를 위한 주행로봇.<br>상위 시스템과 모터·센서 사이의 펌웨어를 담당합니다.</p>
+        <div class="chips"><span>STM32F411RE</span><span>FreeRTOS</span><span>micro-ROS</span><span>Motor Control</span></div>
+        <div class="feature-title"><span class="index">01</span><div><p>FEATURED PROJECT</p><h2>STM32F411 기반<br>주행로봇 펌웨어</h2></div></div>
+        <p class="description">NUCLEO-F411RE를 TurtleBot3의 MCU로 사용하는 주행로봇 제어 시스템. XL430 바퀴 모터, MPU9250 IMU, 창고 적재용 리니어 모터와 ROS 2 연동 펌웨어를 담당합니다.</p>
+        <div class="project-actions" style="display:flex;flex-wrap:wrap;gap:10px"><a class="button primary" style="margin:0" href="#robot-hardware">하드웨어 구성 보기</a><a class="button" style="margin:0" href="https://pjongb.github.io/7s_FA-SIMULATION/" target="_blank" rel="noopener noreferrer">공정 시뮬레이션 보기 ↗</a></div>
+      </div>
+<div class="architecture" aria-label="Raspberry Pi와 STM32F411의 ROS 통신 및 모터·센서 제어 구조">
+        <div class="panel-heading"><span>SYSTEM ARCHITECTURE</span><span>01 / 03</span></div>
+        <div class="arch-node host"><small>HIGH-LEVEL CONTROL</small><strong>Raspberry Pi · ROS 2</strong><span>micro-ROS Agent</span></div>
+        <div class="bus"><span>↓ /cmd_vel</span><span>↑ /odom · /joint_states · /tf</span></div>
+        <div class="mcu"><div class="mcu-title"><small>MY RESPONSIBILITY</small><strong>STM32F411 + FreeRTOS</strong></div><div class="mcu-grid"><span>micro-ROS<br><b>명령 수신 · 상태 발행</b></span><span>Drive Control<br><b>차동 구동 · 명령 만료</b></span><span>Motor Driver<br><b>UART · Sync Read/Write</b></span><span>Odometry<br><b>엔코더 기반 위치 계산</b></span></div></div>
+        <div class="bus"><span>모터 구동 · 센서 연동</span><span>명령 / 피드백</span></div>
+        <div class="wheel-row hardware-row"><div class="arch-node"><small>WHEEL MOTOR</small><strong>XL430</strong><span>좌우 바퀴 제어</span></div><div class="arch-node"><small>IMU</small><strong>MPU9250</strong><span>센서 연동</span></div><div class="arch-node"><small>LIFT MOTOR</small><strong>리니어 모터</strong><span>창고 적재용 승강</span></div></div>
+        <div class="arch-note"><span>제어 보드</span><b>STM32F411RE</b></div>
+      </div>
+    </div>
+        <div class="hero-bottom"><span>MOBILE ROBOT FIRMWARE</span><p>상위 명령과 실제 구동을 연결하는 제어 계층</p><span>01 / 03</span></div>
+  </section><section class="sheet light hardware-sheet" id="robot-hardware" data-project="robot" aria-labelledby="hardware-title">
+    <div class="section-top"><span class="eyebrow">01 / MOBILE ROBOT FIRMWARE</span><span>02 / 03</span></div>
+    <div class="section-heading"><div><p class="kicker">직접 구성한 하드웨어</p><h2 id="hardware-title">주행로봇 하드웨어 구성</h2></div></div>
+    <div class="hardware-layout">
+      <figure class="hardware-figure">
+        <div class="panel-heading"><span>HARDWARE CONFIGURATION</span><span>02 / 03</span></div>
+        <a class="hardware-image-link" href="robot-hardware.png" target="_blank" rel="noopener noreferrer" aria-label="주행로봇 하드웨어 구성도 원본 확대 보기 (새 탭)">
+          <img src="robot-hardware.png" alt="직접 구성한 주행로봇 하드웨어 연결도. 배터리와 전원부, XL430 모터 두 대, Raspberry Pi, NUCLEO-F411RE 보드 및 MPU9250 IMU의 배선 구성." width="830" height="638">
+        </a>
+        <figcaption><div><strong>직접 구성한 주행로봇 하드웨어</strong><p>전원부 · STM32F411 · XL430 · Raspberry Pi · IMU</p></div><a href="robot-hardware.png" target="_blank" rel="noopener noreferrer">원본 확대 보기 ↗</a></figcaption>
+      </figure>
+      <div class="hardware-notes"><h3 class="label">하드웨어 구성</h3><div class="work-list">
+        <article><span>01</span><div><h3>전원부</h3><p>배터리와 전원 분배부, DC-DC 변환기를 연결해 각 장치의 전원을 구성했습니다.</p></div></article>
+        <article><span>02</span><div><h3>STM32F411 · Raspberry Pi</h3><p>NUCLEO-F411RE를 TurtleBot3의 MCU로 사용하고, Raspberry Pi와 연결해 상위 주행 명령과 상태 데이터를 주고받습니다.</p></div></article>
+        <article><span>03</span><div><h3>XL430 · MPU9250</h3><p>좌우 XL430 바퀴 모터와 IMU를 연결해 구동부와 센서부를 구성했습니다.</p></div></article>
+      </div><a class="button hardware-next" href="#robot-detail">담당 업무 보기</a></div>
+    </div>
+    <footer class="sheet-footer"><span>주행로봇 하드웨어 구성 · 오은지</span><span>오은지 / FIRMWARE PORTFOLIO <b>02 / 03</b></span></footer>
+  </section><section class="sheet light" id="robot-detail" data-project="robot" aria-labelledby="robot-detail-title">
+    <div class="section-top"><span class="eyebrow">01 / MOBILE ROBOT FIRMWARE</span><span>03 / 03</span></div>
+    <div class="section-heading"><div><p class="kicker">하드웨어 구성 · 제어 · ROS 2 연동</p><h2 id="robot-detail-title">펌웨어 구현 및 ROS 2 연동</h2></div><a class="text-link" href="https://github.com/O-Eunj/waffle" target="_blank" rel="noopener noreferrer">펌웨어 코드 ↗</a></div>
+    <div class="two-col">
+      <div><h3 class="label">모터와 센서 제어</h3><div class="work-list">
+        <article><span>01</span><div><h3>XL430 바퀴 모터 제어</h3><p>UART 기반 DYNAMIXEL 통신으로 좌우 바퀴를 구동합니다. 주행 명령을 모터 속도로 변환하고, 엔코더 위치·속도 피드백을 수집합니다.</p></div></article>
+        <article><span>02</span><div><h3>MPU9250 IMU 연동</h3><p>주행로봇의 움직임을 감지하는 MPU9250 IMU를 담당합니다. 센서의 하드웨어 연결과 펌웨어 연동을 구성합니다.</p></div></article>
+        <article><span>03</span><div><h3>창고 적재용 리니어 모터 제어</h3><p>지게차 로봇이 창고에 물품을 적재할 때 사용하는 리니어 모터를 담당합니다. 적재를 위한 승강 동작과 모터 제어 로직을 구성합니다.</p></div></article>
+      </div></div>
+      <div class="firmware-work"><h3 class="label">시스템 구성과 통합</h3><div class="work-list">
+        <article><span>04</span><div><h3>STM32F411 하드웨어 구성</h3><p>STM32F411 보드를 주행로봇의 MCU로 사용합니다. Raspberry Pi, 바퀴 모터, IMU와 리니어 모터를 연결하는 하드웨어 구성을 담당합니다.</p></div></article>
+        <article><span>05</span><div><h3>FreeRTOS · micro-ROS</h3><p>FreeRTOS 기반으로 제어 코드를 구성하고, micro-ROS를 통해 Raspberry Pi의 ROS 2와 연결합니다. 주행 명령 수신과 상태 피드백을 펌웨어에 통합합니다.</p></div></article>
+        <article><span>06</span><div><h3>주행 로직과 상태 피드백</h3><p>차동 구동 명령 처리와 엔코더 기반 odometry를 구성합니다. ROS 토픽으로 바퀴 상태·위치를 전달하고, 명령 타임아웃과 속도 제한을 주행 로직에 반영합니다.</p></div></article>
+      </div></div>
+    </div>
+    <div class="learning"><span>MY CONTRIBUTION</span><p><strong>하드웨어 구성부터 모터·센서 제어, ROS 2 통신까지</strong> 주행로봇의 펌웨어를 담당합니다.</p></div>
+    <footer class="sheet-footer"><span>STM32F411RE · XL430 · MPU9250 · Linear Motor · FreeRTOS · micro-ROS</span><span>오은지 / FIRMWARE PORTFOLIO <b>03 / 03</b></span></footer>
+  <div class="source-links"><a href="https://pjongb.github.io/7s_FA-SIMULATION/" target="_blank" rel="noopener noreferrer">공정 시뮬레이션 ↗</a><a href="https://rorobot.atlassian.net/wiki/spaces/robot3/overview" target="_blank" rel="noopener noreferrer">팀 프로젝트 문서 ↗</a></div><p class="source-note">시뮬레이션은 팀 공정 설명용 데모입니다. 개인 담당 범위는 주행로봇 펌웨어입니다.</p></section><div class="detail-end"><a href="index.html#projects">← 프로젝트 목록</a><a href="guide.html">다음 프로젝트 · 안내견 로봇 →</a></div></main><aside class="page-controls" aria-label="상세 페이지 탐색"><button id="prev-page" aria-label="이전 장">↑</button><span id="page-count" aria-live="polite"></span><button id="next-page" aria-label="다음 장">↓</button><span class="control-divider"></span><button id="print">인쇄 / PDF</button></aside></body></html>

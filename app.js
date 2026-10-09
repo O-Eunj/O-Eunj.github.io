@@ -1,6 +1,6 @@
 'use strict';
 const sheets = [...document.querySelectorAll('.sheet')];
-const navLinks = [...document.querySelectorAll('.topbar nav a')];
+const navLinks = [...document.querySelectorAll('.detail-bar nav a')];
 const counter = document.querySelector('#page-count');
 const previous = document.querySelector('#prev-page');
 const next = document.querySelector('#next-page');
@@ -17,7 +17,7 @@ function updateNavigation() {
   previous.disabled = current === 0;
   next.disabled = current === sheets.length - 1;
   navLinks.forEach(link => {
-    if (link.hash === `#${sheets[current].dataset.project}`) link.setAttribute('aria-current', 'location');
+    if (link.hash === `#${sheets[current].id}`) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
   });
 }
@@ -38,7 +38,7 @@ document.querySelector('#print').addEventListener('click', () => window.print())
 updateNavigation();
 
 const videoConfig = window.PORTFOLIO?.plcVideo;
-if (videoConfig?.src?.trim()) {
+if (document.querySelector('#plc-media') && videoConfig?.src?.trim()) {
   const area = document.querySelector('#plc-media');
   try {
     const url = new URL(videoConfig.src, window.location.href);
