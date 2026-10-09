@@ -12,3 +12,4 @@
 @media print{.plc #plc-media{width:117mm;height:auto}.plc #plc-media video{height:auto;max-height:88mm}}
 
 .project-actions{margin-top:23px;align-items:center}.project-actions .button{margin-top:0}
+.plc-overview{margin:0 0 28px;font-size:14px}.plc-tools{padding:14px 18px;background:#edf4f5;border-left:3px solid #287f83}.plc-tools strong{margin-right:16px}.plc-modes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:22px 0 16px}.plc-modes h2{font-size:18px;margin-bottom:8px}.plc-modes p{color:#526272}.plc-functions{padding-left:20px;margin:0;line-height:1.9}.plc-functions strong{margin-right:8px}@media(max-width:760px){.plc-modes{grid-template-columns:1fr;gap:16px}.plc-tools strong{display:block}}
