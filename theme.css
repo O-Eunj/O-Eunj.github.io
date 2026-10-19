@@ -1,0 +1,66 @@
+/* Shared palette from the Smart Plant case study. Load after page layouts. */
+:root{--blue:#3264bf;--project-heading:#26313d;--project-panel:#f5f6f7;--project-border:#dce1e5;--project-result:#f0f3e8}
+.detail .sheet{border-top:3px solid #dce1e5}
+.detail .section-top{color:#526174;border-color:#dce1e5}
+.detail .section-heading h1,.detail .section-heading h2{color:var(--project-heading)}
+.detail .kicker,.detail .label,.detail .work-list article>span{color:#285eab}
+.detail .project-number{color:#dce1e5}
+.detail .sheet:first-of-type{background:#ffffff}
+.detail .chips span,.plc .plc-stack span{background:#f2f4f5;border-color:#dce1e5;color:#526174}
+.detail .role-callout{background:#f4f5f6;border:0;border-radius:5px;padding:15px 18px}
+.detail .role-callout h3,.detail .step-card h3,.rc-code-grid h3{color:var(--project-heading)}
+.detail .role-callout p{color:#485665}
+.detail .control-diagram,.detail .step-card,.rc-gallery figure,.rc-code-grid article{background:var(--project-panel);border-color:var(--project-border);border-radius:6px}
+.detail .project-photo{background:var(--project-panel);border:1px solid var(--project-border);border-radius:6px;overflow:hidden}
+.detail .project-photo figcaption{padding:12px 14px;color:#526174}
+.detail .diagram-core,.rc-code-grid pre{background:#293746;color:#fff}
+.detail .diagram-core p{color:#e5effb}
+.detail .diagram-core small{color:#d6f58d}
+.detail .diagram-output,.detail .mini-code{background:#f4f5f6;border-color:#dce1e5;color:#485665}
+.detail .learning,.rc-evidence{background:var(--project-result);border-left:4px solid #92b64b;color:#3c4f30;border-radius:0}
+.detail .learning>span,.rc-evidence strong{color:#3c571b}
+.rc-code-grid .rc-filename{color:#526174}
+.detail .sheet-footer{border-color:#dce1e5;color:#566273}
+.detail .sheet-footer b{color:#526174}
+.plc.sheet{background:#fff;color:var(--ink)}
+.plc .subtitle{color:#566273}
+.plc .plc-demo,.plc .plc-controls{background:var(--project-panel);border-color:var(--project-border);border-radius:6px}
+.plc .plc-label,.plc #plc-caption,.plc .plc-mode p,.plc .plc-controls p{color:#526174}
+.plc .plc-mode-title>span{color:#526174}
+.plc .plc-mode h2,.plc .plc-controls h3{color:var(--project-heading)}
+.plc .plc-mode,.plc .plc-flow{border-color:var(--project-border)}
+.plc .plc-flow{color:#485665}
+.plc .plc-flow b{background:var(--project-result);color:#3c571b}
+.plc .plc-routing>span{background:#f4f5f6;color:#526174}
+.plc .plc-routing b{color:#526174}
+.home .brand-mark,.home .brand-mark span,.home .skill-group h3,.home .card-role,.history-kind,.completion{color:#526174}
+.home .project-card{border-color:var(--project-border);border-top:1px solid #dce1e5;border-radius:6px}
+.home .project-card:hover{background:#ffffff;border-color:var(--blue)}
+.home .card-body h3{color:var(--project-heading)}
+.home .card-tags{gap:5px;flex-wrap:wrap}
+.home .card-tags span{background:#f2f4f5;border:1px solid #dce1e5;border-radius:4px;padding:2px 6px;color:#526174;font-size:10px}
+.home .card-tags span+span:before{content:none}
+.home .robot-art,.home .plc-art,.home .guide-art:has(img){background:#eceff0}
+.home .photo-badge{background:#293746;color:#fff}
+.home .projects-heading h2 span{background:var(--project-result);color:#3c571b}
+.home .ladder{color:#526174}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+@media(max-width:760px){.detail-bar{flex-wrap:wrap}.detail-bar nav{flex-wrap:wrap;gap:10px 16px}.detail .section-heading h1{font-size:30px;overflow-wrap:anywhere}}
+@media print{.detail .sheet{border-top-width:3px}}
+@media(max-width:600px){.detail .section-heading .project-number{display:none}.detail .section-heading{align-items:flex-start}.detail .section-heading>div{min-width:0;width:100%}.detail .section-heading h1{font-size:28px}.plc .plc-label,.plc .plc-flow{flex-wrap:wrap}}
+
+/* Neutral surfaces; reserve blue for actions and small accents. */
+.home{background:#f6f7f8;color:#26313d}
+.detail .kicker,.detail .label,.detail .work-list article>span{color:#526174}
+.home .project-card:hover{background:#fafbfc;border-color:#9aa7b5}
+#robot{background:#fff}
+#robot .architecture,.wiring,.safety-band{background:#f4f6f7;border-color:#dce1e5}
+#robot .arch-node.host,#robot .mcu-title,.problem-observation{background:#293746;border-color:#293746}
+#robot .mcu-grid,#robot .mcu-grid>span{background:#f5f7f9}
+#robot .mcu{background:#f5f7f9;border-color:#cbd3de}
+#robot .chips span{background:#f2f4f5;border-color:#dce1e5;color:#526174}
+#robot .role-summary{background:#f4f5f6}
+#robot .project-actions .button:not(.primary){background:#fff;border-color:#cbd3de;color:#485665}
+#robot .waffle-extension,.takeaway{background:#f0f3e8}
+.step-no,.change-tag{background:#eef1f4;color:#526174}
+.trouble-steps h3{color:#26313d}
