@@ -64,3 +64,63 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 #robot .waffle-extension,.takeaway{background:#f0f3e8}
 .step-no,.change-tag{background:#eef1f4;color:#526174}
 .trouble-steps h3{color:#26313d}
+/* Gray palette: soft gray canvas, white reading surfaces, charcoal accents. */
+:root {
+  --tone-canvas: #e9e9e9;
+  --tone-soft: #dedede;
+  --tone-line: #c9c9c9;
+  --tone-accent: #454545;
+  --tone-ink: #242424;
+  --tone-muted: #595959;
+  --blue: var(--tone-accent);
+  --lime: #e2e2e2;
+  --project-heading: var(--tone-ink);
+  --project-panel: #f1f1f1;
+  --project-border: var(--tone-line);
+  --project-result: var(--tone-soft);
+  background: var(--tone-canvas);
+}
+.home, body.detail { background: var(--tone-canvas); color: var(--tone-ink); }
+.topbar, .home .topbar { background: var(--tone-canvas); border-color: var(--tone-line); }
+.brand-mark, .brand-mark span, .home .brand-mark, .home .brand-mark span,
+.home .skill-group h3, .home .card-role, .history-kind, .completion,
+.home .github, .home-footer>a { color: var(--tone-accent); }
+.profile-intro, .overview-history, .experience-section,
+.home .home-footer, .home .skill-group { border-color: var(--tone-line); }
+.profile-name>p, .profile-summary p, .history-item p,
+.home .projects-heading>p, .home .card-meta, .home .card-body>p,
+.home .card-role>span, .home-footer p, .home-footer>span { color: var(--tone-muted); }
+.home .project-card { background: #fff; border-color: var(--tone-line); }
+.home .project-card:hover { background: #f7f7f7; border-color: var(--tone-accent); }
+.home .robot-art, .home .plc-art, .home .guide-art:has(img) { background: var(--tone-soft); }
+.home .card-tags span { background: #f1f1f1; border-color: var(--tone-line); color: var(--tone-accent); }
+.home .projects-heading h2 span { background: #d8d8d8; color: var(--tone-accent); }
+.home .ladder { color: var(--tone-accent); }
+.home .photo-badge { background: #3e3e3e; }
+.topbar nav a:hover, .topbar nav a[aria-current] { color: var(--tone-accent); border-bottom-color: var(--tone-accent); }
+.detail .sheet { border-top-color: var(--tone-line); }
+.detail .kicker, .detail .label, .detail .work-list article>span { color: var(--tone-accent); }
+.detail .role-callout, #robot .role-summary,
+.detail .diagram-output, .detail .mini-code,
+#robot .architecture, .wiring, .safety-band { background: var(--project-panel); border-color: var(--tone-line); }
+.detail .chips span, #robot .chips span, .plc .plc-stack span,
+.step-no, .change-tag, .plc .plc-routing>span { background: var(--tone-soft); color: var(--tone-accent); border-color: var(--tone-line); }
+.detail .learning, .rc-evidence, #robot .waffle-extension, .takeaway { background: var(--tone-soft); border-color: #777777; color: var(--tone-ink); }
+.detail .learning>span, .rc-evidence strong, .plc .plc-flow b,
+.detail .diagram-core small { color: var(--tone-accent); }
+.detail .diagram-core small { color: #e2e2e2; }
+.plc .plc-flow b { background: var(--tone-soft); }
+@media print {
+  :root, .home, body.detail { background: #fff; }
+}
+#robot .mcu-title small { color: #e2e2e2; }
+#robot .mcu-grid, #robot .mcu-grid>span { background: var(--project-panel); }
+.takeaway strong, .takeaway>span, td:last-child { color: var(--tone-accent); }
+
+:root { --ink: #242424; --muted: #595959; --line: #d0d0d0; }
+#robot .arch-node.host, #robot .mcu-title, .problem-observation,
+.detail .diagram-core, .rc-code-grid pre, .page-controls { background: #333333; border-color: #444444; }
+.detail .diagram-core p, #robot .host small, #robot .host span { color: #eeeeee; }
+.detail .section-top, .detail .sheet-footer, .detail .sheet-footer b,
+.detail .role-callout p, .detail .project-photo figcaption,
+.plc .subtitle, .plc .plc-label, .plc #plc-caption, .plc .plc-mode p, .plc .plc-controls p { color: var(--tone-muted); }
